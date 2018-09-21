@@ -1,0 +1,38 @@
+{
+  "name": "human-unit",
+  "version": "1.0.0",
+  "description": "Unit formatter for human",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsc && ospec",
+    "preversion": "npm run test",
+    "version": "npm run build",
+    "postversion": "git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/futurist/human-unit.git"
+  },
+  "keywords": [
+    "unit",
+    "converter",
+    "formatter",
+    "human",
+    "size",
+    "file"
+  ],
+  "author": "James Yang <26634873@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/futurist/human-unit/issues"
+  },
+  "homepage": "https://github.com/futurist/human-unit#readme",
+  "devDependencies": {
+    "ospec": "^3.0.1",
+    "tslint": "^5.11.0",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.0.3"
+  }
+}

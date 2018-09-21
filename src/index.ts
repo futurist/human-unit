@@ -26,17 +26,15 @@ function humanUnit (value: number, unit: string = 'B', {
   if (pos < 0) {
     throw new TypeError(`${unit} is not in the units: ${units.join()}`)
   }
-  const {
-        length
-    } = units
+  const len = units.length - 1
   ceil = ceil || factor
   const factorList: number[] = !Array.isArray(factor)
-        ? Array(length).fill(factor)
+        ? Array(len).fill(factor)
         : factor
   const ceilList: number[] = !Array.isArray(ceil)
-        ? Array(length).fill(ceil)
+        ? Array(len).fill(ceil)
         : ceil
-  while (pos < length - 1 && Math.abs(value) >= Math.abs(ceilList[pos])) {
+  while (pos < len && Math.abs(value) >= Math.abs(ceilList[pos])) {
     value = value / factorList[pos]
     unit = units[++pos]
   }

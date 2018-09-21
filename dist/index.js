@@ -20,15 +20,15 @@ function humanUnit(value, unit, _a) {
     if (pos < 0) {
         throw new TypeError(unit + " is not in the units: " + units.join());
     }
-    var length = units.length;
+    var len = units.length - 1;
     ceil = ceil || factor;
     var factorList = !Array.isArray(factor)
-        ? Array(length).fill(factor)
+        ? Array(len).fill(factor)
         : factor;
     var ceilList = !Array.isArray(ceil)
-        ? Array(length).fill(ceil)
+        ? Array(len).fill(ceil)
         : ceil;
-    while (pos < length - 1 && Math.abs(value) >= Math.abs(ceilList[pos])) {
+    while (pos < len && Math.abs(value) >= Math.abs(ceilList[pos])) {
         value = value / factorList[pos];
         unit = units[++pos];
     }

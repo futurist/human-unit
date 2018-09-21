@@ -12,7 +12,16 @@ function humanUnit(value, unit, _a) {
         'EB',
         'ZB',
         'YB'
-    ] : _c, _d = _b.factor, factor = _d === void 0 ? 1024 : _d, ceil = _b.ceil;
+    ] : _c, _d = _b.factor, factor = _d === void 0 ? [
+        1024,
+        1024,
+        1024,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000
+    ] : _d, ceil = _b.ceil;
     if (!Number.isFinite(value)) {
         throw new TypeError("Expected a finite number, got " + typeof value + ": " + value);
     }

@@ -26,9 +26,9 @@ it('file size', ()=>{
     it(humanUnit(size.neg)).deepEquals({value:-1, unit: 'KB'})
     it(humanUnit(size.byte)).deepEquals({value:1, unit: 'B'})
     it(humanUnit(size.zero)).deepEquals({value:0, unit: 'B'})
-    it(humanUnit(size.tb)).deepEquals({value:1, unit: 'TB'})
+    it(humanUnit(size.tb)).deepEquals({value:1.024, unit: 'TB'})
     it(humanUnit(size.small)).deepEquals({value:0.125, unit: 'B'})
-    it(humanUnit(size.huge)).deepEquals({value:82718061255302770, unit: 'YB'})
+    it(humanUnit(size.huge)).deepEquals({value:93132257461547860, unit: 'YB'})
     try{
         it(humanUnit(size.invld)).deepEquals({value:0, unit: 'B'})
     }catch(e){

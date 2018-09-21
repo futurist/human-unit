@@ -16,7 +16,16 @@ function humanUnit (value: number, unit: string = 'B', {
       'ZB',
       'YB'
     ],
-    factor = 1024,
+    factor = [
+      1024,
+      1024,
+      1024,
+      1000,
+      1000,
+      1000,
+      1000,
+      1000
+    ],
     ceil
 }: IOptions = {}) {
   if (!Number.isFinite(value)) {

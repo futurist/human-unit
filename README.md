@@ -15,9 +15,10 @@ npm install human-unit
 
 ```js
 import humanUnit from 'human-unit'
-humanUnit(1024)  // {value: 1, unit: 'kB'}
+humanUnit(1024)  // {value: 1, unit: 'KB'}
 humanUnit(1024, 'MB')  // {value: 1, unit: 'GB'}
-humanUnit(1024, 'mb', {units: ['mb', 'gb']})  // {value: 1, unit: 'gb'}
+// change units as you need
+humanUnit(1024, 'M', {units: ['M', 'G']})  // {value: 1, unit: 'G'}
 ```
 
 ### - Time unit
@@ -50,5 +51,5 @@ The `ceil` value will be used to determine whether the unit should be bumped int
 
 ## Note
 
-The file size calculation is easy if you look into [the rule](https://en.wikipedia.org/wiki/Kilobyte), I want to use **SI** standard when below `GB`, so the units is `B,KB,MB,GB`, but when the size is very big, after `GB` I want to use `IEC` standard, this is why the `factor` is array of numbers by default that changed from `1024` to `1000` after `GB`.
+The file size calculation is easy if you look into [the rule](https://en.wikipedia.org/wiki/Kilobyte), I want to use **SI** standard when below `GB`, so the units is `B,KB,MB,GB` (notice the `KB` is not `kB`), but when the size is very big, after `GB` I want to use `IEC` standard, this is why the `factor` is array of numbers by default that changed from `1024` to `1000` after `GB`.
 

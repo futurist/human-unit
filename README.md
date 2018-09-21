@@ -14,7 +14,7 @@ npm install human-unit
 ### - File size
 
 ```js
-import humanUnit from 'humanUnit'
+import humanUnit from 'human-unit'
 humanUnit(1024)  // {value: 1, unit: 'kB'}
 humanUnit(1024, 'MB')  // {value: 1, unit: 'GB'}
 humanUnit(1024, 'mb', {units: ['mb', 'gb']})  // {value: 1, unit: 'gb'}
@@ -22,7 +22,7 @@ humanUnit(1024, 'mb', {units: ['mb', 'gb']})  // {value: 1, unit: 'gb'}
 
 ### - Time unit
 ```js
-import humanUnit from 'humanUnit'
+import humanUnit from 'human-unit'
 const timePreset = {
     factor: [1000, 60, 60, 24],
     units: ['mili', 'sec', 'min', 'hour', 'day']

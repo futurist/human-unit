@@ -4,7 +4,7 @@ function humanUnit(value, unit, _a) {
     if (unit === void 0) { unit = 'B'; }
     var _b = _a === void 0 ? {} : _a, _c = _b.units, units = _c === void 0 ? [
         'B',
-        'kB',
+        'KB',
         'MB',
         'GB',
         'TB',

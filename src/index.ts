@@ -7,7 +7,7 @@ export interface IOptions {
 function humanUnit (value: number, unit: string = 'B', {
     units = [
       'B',
-      'kB',
+      'KB',
       'MB',
       'GB',
       'TB',

@@ -54,6 +54,7 @@ it('BAI WAN', ()=>{
     it(humanUnit(180, options)).deepEquals({ value: 1.8, unit: 'BAI' })
     it(humanUnit(180000, options)).deepEquals({ value: 18, unit: 'WAN' })
     it(humanUnit(18000000, options)).deepEquals({ value: 1800, unit: 'WAN' })
+    it(humanUnit(18000, {...options, ceils: [18001]})).deepEquals({ value: 18000, unit: '' })
 })
 
 if(require.main == module) it.run()

@@ -7,7 +7,7 @@
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
   "files": [
-    "lib/",
+    "dist/",
     "esm/"
   ],
   "scripts": {

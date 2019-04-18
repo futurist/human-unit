@@ -1,10 +1,8 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.timePreset = {
+export var timePreset = {
     factors: [1000, 60, 60, 24],
     units: ['ms', 's', 'm', 'h', 'd']
 };
-exports.sizePreset = {
+export var sizePreset = {
     units: [
         'B',
         'KB',
@@ -59,4 +57,4 @@ function humanUnit(value, _a) {
         unit: unit
     };
 }
-exports.default = humanUnit;
+export default humanUnit;

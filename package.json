@@ -1,14 +1,22 @@
 {
   "name": "human-unit",
-  "version": "1.0.6",
+  "version": "2.0.0",
   "description": "Unit formatter for human",
   "main": "dist/index.js",
+  "module": "esm/index.js",
   "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "lib/",
+    "esm/"
+  ],
   "scripts": {
     "build": "tsc",
+    "build:es": "tsc -m esNext --outDir esm",
+    "build:all": "npm run build && npm run build:es",
     "test": "tsc && ospec",
     "preversion": "npm run test",
-    "version": "npm run build",
+    "version": "build:all",
     "postversion": "git push --follow-tags"
   },
   "repository": {
